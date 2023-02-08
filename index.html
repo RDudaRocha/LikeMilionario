@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Home - Like Milionário</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body style="background: #000;">
+    <div class="menucard" style="width: 100%; height: 100%;">
+      <div class="iphone">
+        <div class="conteudo" style="width: 100%; height: 100%; border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
+          <div class="header">
+            <div class="header-summary">
+              <div class="summary-text" style="text-align: left; margin-top: 0%; padding-top: 0%;">
+                Seu saldo:
+                <div class="summary-balance">
+                  <p style="margin-bottom: 0%;">R$ <span id="display">0.0</span></p>
+                </div>
+                <div class="summary-text-2">
+                  <p id="alertamoney" style="color:green; display: none;">Obrigada por curtir. <br>Você ganhou + R$0,30!</p>
+                </div>
+              </div>
+            </div>
+            <div class="user-profile">
+              <img src="https://pbs.twimg.com/profile_images/834493671785525249/XdLjsJX_.jpg" class="user-photo">
+            </div>
+          </div>
+          <div class="content">
+            <div class="card" id="London">
+              <div class="tinder">
+                <div class="tinder--cards">
+                  <div class="tinder--card">
+                    <img src="https://cdn.dicionariopopular.com/imagens/cafbe07867c53ad097a4d2ef374c01e8.jpg" style="width: 340px; height: 300px; margin-top: 30px; margin-bottom: 30px;">
+                  </div>
+                  <div class="tinder--card">
+                    <img src="https://i.pinimg.com/564x/46/24/06/462406549069095494268c878dda1170.jpg" style="width: 340px; height: 300px; margin-top: 30px; margin-bottom: 30px;">
+                  </div>
+                  <div class="tinder--card">
+                    <img src="https://i.pinimg.com/564x/7b/16/4f/7b164f2119371cdc970521111306ee1e.jpg" style="width: 340px; height: 300px; margin-top: 30px; margin-bottom: 30px;">
+                  </div>
+                  <div class="tinder--card">
+                    <img src="https://i.pinimg.com/564x/3b/35/70/3b3570e3078a02c2d10484bd84aaf07a.jpg" style="width: 340px; height: 300px; margin-top: 30px; margin-bottom: 30px;">
+                  </div>
+                  <div class="tinder--card">
+                    <img src="https://memesengracadoscdn.files.wordpress.com/2022/11/memes-engracados-para-status-de-whatsapp-facebook-18.jpg" style="width: 340px; height: 300px; margin-top: 30px; margin-bottom: 30px;">
+                  </div>
+                  <div class="tinder--card">
+                    <img src="https://cdn.dicionariopopular.com/imagens/meme-gato-1-cke.jpg" style="width: 340px; height: 300px; margin-top: 30px; margin-bottom: 30px;">
+                  </div>
+                  <div class="tinder--card">
+                    <img src="https://i.pinimg.com/564x/53/a2/d6/53a2d6424bcd33800e16582bffc6f10d.jpg" style="width: 340px; height: 300px; margin-top: 30px; margin-bottom: 30px;">
+                  </div>
+                  <div class="tinder--card">
+                    <img src="https://cdn.dicionariopopular.com/imagens/meme-cachorro4-cke.jpg" style="width: 340px; height: 300px; margin-top: 30px; margin-bottom: 30px;">
+                  </div>
+                  <div class="tinder--card">
+                    <img src="https://cdn.dicionariopopular.com/imagens/eef343b04cbea4d33af7e7c63909b78e.jpg" style="width: 340px; height: 300px; margin-top: 30px; margin-bottom: 30px;">
+                  </div>
+                  <div class="tinder--card">
+                    <img src="https://cdn.dicionariopopular.com/imagens/meme-engracado-cachorro-cke.jpg" style="width: 340px; height: 300px; margin-top: 30px; margin-bottom: 30px;">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="drawer">
+          <a href="perfil.html"><span><i class="bi bi-person"></i></span></a>
+          <!--div id="like" class="menu-btn"><i class="bi bi-heart"></i></div-->
+          <button  onclick="openCity(event, 'Paris')" class="tinder--buttons menu-btn" id="love"><i class="bi bi-heart"></i></button>
+          <a href="carteira.html"><span><i class="bi bi-wallet2"></i></span></a>
+        </div>
+      </div>
+    </div>
+    <!-- partial -->
+    <script src='https://hammerjs.github.io/dist/hammer.min.js'></script><script  src="./script.js"></script>
+  </body>
+</html>
