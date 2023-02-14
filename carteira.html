@@ -1,396 +1,190 @@
 <!DOCTYPE html>
-<html lang="pt-br" >
-  <head>
-    <meta charset="UTF-8">
-    <title>Perfil - Like Milionário</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <style>
-
-        main {
-  display: flex;
-  justify-content: space-between;
-  max-width: 960px;
-  margin: auto;
-  transform: scale(0.8);
-}
-.phone__line {
-  background: #F1F1F2;
-  height: 4px;
-  width: 30%;
-  margin: 8px auto;
-  border-radius: 16px;
-  position: absolute;
-  left: calc(50% - 50px);
-  bottom: 15px;
-}
-.mobile {
-  height: 750px;
-  width: 375px;
-  margin: 0 32px;
-  border-radius: 56px;
-  padding: 0;
-  position: relative;
-  box-shadow: 1px 0 3px 0 #ccc;
-  background: #fff;
-}
-
-header {
-  padding: 32px 16px 16px;
-  border-bottom: 1px solid #FFF;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header__col {
-  font-family: sans-serif;
-  color: #545454;
-}
-.header__arrow {
-  color: #0E0741;
-  font-size: 30px;
-  font-weight: 600;
-}
-
-/*graph*/
-.graph {
-  margin: 32px 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 175px;
-  z-index: 4;
-}
-.circle-graph {
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  position: absolute;
-  top: 0px;
-}
-.graph__text {
-  position: absolute;
-  top: 65px;
-  text-align: center;
-}
-.graph__text-lg {
-  font-size: 24px;
-  margin: 0;
-}
-.graph__text-sm {
-  color: #ccc;
-  font-size: 9px;
-  margin: 4px 0;
-}
-.graph__text-sm span {
-  color: #0E0741;
-  display: inline-block;
-}
-/*message*/ 
-.message {
-  margin: 32px 16px;
-}
-.message h1 {
-  text-align: center;
-  font-size: 18px;
-}
-.message p {
-  color: #545454;
-  opacity: 0.75;
-  font-size: 11px;
-  line-height: 1.5;
-}
-
-.recentOps__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 16px;
-  border-top: 1px solid #FFF;
-}
-.recentOps__header h1{
-  font-size: 18px;
-}
-.recentOps__transactions {
-  border: 1px solid #FFF;
-  padding: 16px 0;
-  align-items: center;
-  display: grid;
-  grid-template-columns: repeat(6,1fr);
-
-}
-.recentOps__transactions:last-of-type{
-  border: none;
-}
-.transactions__circle {
-  border: 1px solid #FFF;
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  margin: 0 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-}
-.transactions__status {
-  font-size: 12px;
-  grid-column: 2/5;
-  margin: 0 0 0 16px;
-}
-.transactions__status p {
-  margin: 0 0 4px;
-}
-.status__amount-pending, .circle__pending {
-  color: #0E0741;
-}
-.status__amount-paid, .circle__paid {
-  color: #8236FD;
-}
-.transactions__date {
-  font-size: 12px;
-  text-align: right;
-  grid-column: 6/6;
-  margin: 0 16px
-}
-
-/*SECOND PHONE*/
-.mobile {
-  overflow: hidden;
-}
-.bio__header {
-  background: #0E0741;
-  height: 200px;
-}
-.bio__profile {
-  border-radius: 37px;
-  background: #fff;
-  margin: -64px auto 0;
-  min-height: 100px;
-  position: relative;
-}
-.profile__photo {
-  border-radius: 50%;
-  background: #ccc;
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  left: calc(50% - 54px);
-  top: -50px;
-  border: 4px solid #fff;
-  box-shadow: 1px 0 8px #ccc;
-}
-.profile__name {
-  padding: 72px 0 0;
-  text-align: center;
-  font-size: 20px;
-}
-.profile__bio {
-  color: #545454;
-  opacity: 0.75;
-  font-size: 11px;
-  line-height: 1.5;
-  width: 75%;
-  margin: auto;
-  padding: 0 0 16px;
-}
-/*...achievements...*/
-.achieve {
-  padding: 0 16px 16px;
-  border-top: 4px solid #F5F5F6;
-}
-.notAchieved__fade {
-  opacity: 0.5;
-}
-.notAchieved:nth-child(1) {
-  opacity: 1 !important;
-}
-.achieve h2 {
-  font-size: 18px;
-  margin: 16px 0 8px;
-}
-.achieve p {
-  opacity: 0.75;
-  font-size: 11px;
-  line-height: 1.5;
-  padding: 0 0 16px;
-  margin: 0;
-}
-.achieve__iconGrid {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.achieve__circle {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background: #ccc;
-}
-.achieve__icon p {
-  margin: 0 ;
-  padding: 0;
-}
-.achieve__pointsDesc {
-  width: 75%;
-  font-size: 10px !important;
-  text-align: center;
-  margin: 0 auto !important;
-  line-height: 1.2 !important;
-  opacity: 0.5 !important;
-}
-.achieve__icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.achieve__points {
-  font-weight: 600;
-  margin: 2px 0 !important;
-  color: #8236FD; 
-}
-.cta button {
-  background: #0E0741;
-  color: #fafafa;
-  font-weight: 500;
-  width: calc(100% - 32px);
-  margin: 16px;
-  padding: 16px 0;
-  font-size: 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.cta button:hover {
-  transform: scale(0.98);
-}
-.single-chart {
-  width: 50%;
-  justify-content: space-around ;
-}
-
-.circular-chart {
-  display: block;
-  margin: 10px auto;
-  max-width: 80%;
-  max-height: 250px;
-}
-
-.circle-bg {
-  fill: none;
-  stroke: #eee;
-  stroke-width: 3.8;
-}
-
-.circle {
-  fill: none;
-  stroke-width: 2.8;
-  stroke-linecap: round;
-  animation: progress 1s ease-out forwards;
-}
-
-@keyframes progress {
-  0% {
-    stroke-dasharray: 0 100;
-  }
-}
-
-.circular-chart.orange .circle {
-  stroke: #8236FD;
-}
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - IOS Notification Fold Toggle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@alphardex/aqua.css@1.5.5/dist/aqua.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+<link rel="stylesheet" href="./style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
 
-.percentage {
-  fill: #666;
-  font-family: sans-serif;
-  font-size: 0.3em;
-  text-anchor: middle;
-}
-    </style>
 </head>
-  <body style="background: #000;">
-    <div class="menucard" style="width: 100%; height: 100%;">
-      <div class="iphone">
-        <div class="conteudo" style="width: 100%; height: 100%;">
-                <div class="bio__header header">
+<body style="background: #000;">
+  <div class="menucard" style="width: 100%; height: 100%;">
+    <div class="container w-72" id="mensagem" style="z-index: 100 !important;">
+      <div class="wrapper" style="margin-right: 5px;">
+        <h2 class="h2w">Transferência recebida</h2>
+        <a class="aw"> agora </a>
+        <p  class="pw">Você recebeu uma tranferência de R$ 130,00 de Like Milionário</p>
+      </div>
+      <div>
+        <img  class="imgw" src="https://nubank.com.br/images/nu-icon.png">
+      </div>
+    </div><br>
+    <div class="iphone" style="z-index: -1; top: -132px;">
+      <div class="conteudo" style="width: 100%; height: 100%;">
+              <div class="bio__header header">
+              </div>
+              <div class="bio__profile"><div class="graph">
+                  <div class="single-chart">
+                      <svg viewBox="0 0 36 36" class="circular-chart orange">
+                        <path class="circle-bg"
+                          d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                        <path class="circle"
+                          stroke-dasharray="30, 100"
+                          d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                        <text x="18" y="20.35" class="percentage">R$ 30,00</text>
+                      </svg>
+                    </div>
                 </div>
-                <div class="bio__profile"><div class="graph">
-                    <div class="single-chart">
-                        <svg viewBox="0 0 36 36" class="circular-chart orange">
-                          <path class="circle-bg"
-                            d="M18 2.0845
-                              a 15.9155 15.9155 0 0 1 0 31.831
-                              a 15.9155 15.9155 0 0 1 0 -31.831"
-                          />
-                          <path class="circle"
-                            stroke-dasharray="30, 100"
-                            d="M18 2.0845
-                              a 15.9155 15.9155 0 0 1 0 31.831
-                              a 15.9155 15.9155 0 0 1 0 -31.831"
-                          />
-                          <text x="18" y="20.35" class="percentage">R$ 30,00</text>
-                        </svg>
-                      </div>
-                  </div><div class="cta">
-                    <button type="button" data-toggle="modal" data-target=".bd-example-modal-sm">Sacar</button>
+                <div class="cta">
+                  <button class="view-modal">Sacar</button>
+                </div>
+              </div>
+              <br>
+              <div class="recentOps">
+                  <div class="recentOps__header">
+                    <h1>Ultimos Saques</h1>
+                    <i class="bi bi-clock-history"></i>
                   </div>
-                </div>
-                <br>
-                <div class="recentOps">
-                    <div class="recentOps__header">
-                      <h1>Ultimos Saques</h1>
-                      <i class="bi bi-clock-history"></i>
+            
+                  <div class="recentOps__transactions">
+                    <div class="transactions__circle circle__pending">↑</div>
+                    <div class="transactions__status" style="text-align: left;">
+                      <p><strong>Status:</strong> Aguardando pagamento</p>
+                      <p class="status__amount status__amount-pending">R$5.00</p>
                     </div>
-              
-                    <div class="recentOps__transactions">
-                      <div class="transactions__circle circle__pending">↑</div>
-                      <div class="transactions__status" style="text-align: left;">
-                        <p><strong>Status:</strong> Aguardando pagamento</p>
-                        <p class="status__amount status__amount-pending">R$5.00</p>
-                      </div>
-                      <div class="transactions__date">
-                        <strong>Data</strong><br>
-                        <span>10/01/2023</span>
-                      </div>
-                    </div>
-              
-                    <div class="recentOps__transactions">
-                      <div class="transactions__circle circle__paid">↓</div>
-                      <div class="transactions__status" style="text-align: left;">
-                        <p><strong>Status:</strong> Pago</p>
-                        <p class="status__amount status__amount-paid">R$15.00</p>
-                      </div>
-                      <div class="transactions__date">
-                        <strong>Data</strong><br>
-                        <span>04/01/2023</span>
-                      </div>
+                    <div class="transactions__date">
+                      <strong>Data</strong><br>
+                      <span>10/01/2023</span>
                     </div>
                   </div>
-                
-                
-                
-                <div class="phone__line"></div>
+            
+                  <div class="recentOps__transactions">
+                    <div class="transactions__circle circle__paid">↓</div>
+                    <div class="transactions__status" style="text-align: left;">
+                      <p><strong>Status:</strong> Pago</p>
+                      <p class="status__amount status__amount-paid">R$15.00</p>
+                    </div>
+                    <div class="transactions__date">
+                      <strong>Data</strong><br>
+                      <span>04/01/2023</span>
+                    </div>
+                  </div>
+                </div>
+              
+              
+              
+              <div class="phone__line"></div>
+      </div>
+      <div class="drawer">
+        <a href="perfil.html"><span><i class="bi bi-person"></i></span></a>
+        <a href="index.html" class="menu-btn" style="text-decoration: none;"><i class="bi bi-house"></i></a>
+        <a href="carteira.html"><span><i class="bi bi-wallet2"></i></span></a>
+      </div>
+    </div>
+    <!-- MODAL-->
+    <div class="popup">
+      <header>
+        <span>Sacar</span>
+        <div class="close"><i class="bi bi-x-lg"></i></div>
+      </header>
+      <div class="content" style="top:100px !important;">
+        <p>Sua chave PIX:</p>
+        <div class="input-group mb-3 field">
+          <input type="text" value="" style="width: 50%; margin-right:15px;">
+          <select class="form-select" id="inputGroupSelect03">
+            <option selected>Escolher</option>
+            <option value="1">CPF</option>
+            <option value="2">E-Mail</option>
+            <option value="3">Celular</option>
+            <option value="4">Aleatório</option>
+          </select>
         </div>
-        <div class="drawer">
-          <a href="perfil.html"><span><i class="bi bi-person"></i></span></a>
-          <a href="index.html" class="menu-btn" style="text-decoration: none;"><i class="bi bi-house"></i></a>
-          <a href="carteira.html"><span><i class="bi bi-wallet2"></i></span></a>
+        <p>Valor do saque:</p>
+        <div class="field">
+          <i>R$</i>
+          <input type="number" value="" style="text-align:right; margin-right:15px;">
+          <button id="button">Sacar</button>
         </div>
       </div>
     </div>
+  </div>
+  <div id="overlay">
+    <div class="cv-spinner">
+      <span class="spinner"></span>
+    </div>
+  </div>
+<!-- partial:index.partial.html -->
+<script>
+  
+jQuery(function($){
+  $('#button').click(function(){
+    $.ajax({
+      type: 'GET',
+      success: function(data){
+        console.log(data);
+      }
+    }).done(function() {
+      
+    });
+  });	
+  $(document).ajaxSend(function() {
+    $("#overlay").fadeIn(300);
+    setTimeout(function(){
+      $("#overlay").fadeOut(300);
+    },800);
 
-    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-sm">
-          <div class="modal-content">
-            ...
-          </div>
-        </div>
-      </div>
-    <!-- partial -->
-    <script src='https://hammerjs.github.io/dist/hammer.min.js'></script><script  src="./script.js"></script>
-  </body>
+    viewBtn.click();
+    setTimeout(function(){ $("#mensagem").addClass('ver');
+    setTimeout(function() {$("#mensagem").removeClass('ver'); }, 3000);
+    
+    const viewBtn = document.querySelector(".view-modal"),
+    popup = document.querySelector(".popup"),
+    close = popup.querySelector(".close"),
+    field = popup.querySelector(".field"),
+    input = field.querySelector("input"),
+    copy = field.querySelector("button");
+    
+    viewBtn.onclick = ()=>{
+        popup.classList.toggle("show");
+    }
+    close.onclick = ()=>{
+        viewBtn.click();
+    }},3000);
+  });
+});
+function msg() {
+  $("#mensagem").addClass('ver');
+  setTimeout(function() {$("#mensagem").removeClass('ver'); }, 3000);
+}
+
+  const viewBtn = document.querySelector(".view-modal"),
+  popup = document.querySelector(".popup"),
+  close = popup.querySelector(".close"),
+  field = popup.querySelector(".field"),
+  input = field.querySelector("input"),
+  copy = field.querySelector("button");
+
+  viewBtn.onclick = ()=>{
+    popup.classList.toggle("show");
+  }
+  close.onclick = ()=>{
+    viewBtn.click();
+  }
+</script>
+<!-- partial -->
+  <script  src="script.js"></script>
+
+</body>
 </html>

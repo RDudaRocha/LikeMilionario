@@ -49,59 +49,11 @@ header {
   color: #545454;
 }
 .header__arrow {
-  color: #0E0741;
+  color: #d92e7f;
   font-size: 30px;
   font-weight: 600;
 }
 
-/*graph*/
-.graph {
-  margin: 32px 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 175px;
-}
-.circle-graph {
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  position: absolute;
-  top: 0px;
-}
-.graph__text {
-  position: absolute;
-  top: 65px;
-  text-align: center;
-}
-.graph__text-lg {
-  font-size: 24px;
-  margin: 0;
-}
-.graph__text-sm {
-  color: #ccc;
-  font-size: 9px;
-  margin: 4px 0;
-}
-.graph__text-sm span {
-  color: #0E0741;
-  display: inline-block;
-}
-/*message*/ 
-.message {
-  margin: 32px 16px;
-}
-.message h1 {
-  text-align: center;
-  font-size: 18px;
-}
-.message p {
-  color: #545454;
-  opacity: 0.75;
-  font-size: 11px;
-  line-height: 1.5;
-}
 
 .recentOps__header {
   display: flex;
@@ -144,10 +96,10 @@ header {
   margin: 0 0 4px;
 }
 .status__amount-pending, .circle__pending {
-  color: #0E0741;
+  color: #d92e7f;
 }
 .status__amount-paid, .circle__paid {
-  color: #8236FD;
+  color: #d92e7f;
 }
 .transactions__date {
   font-size: 12px;
@@ -161,7 +113,6 @@ header {
   overflow: hidden;
 }
 .bio__header {
-  background: #0E0741;
   height: 200px;
 }
 .bio__profile {
@@ -227,7 +178,6 @@ header {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  background: #ccc;
 }
 .achieve__icon p {
   margin: 0 ;
@@ -240,6 +190,7 @@ header {
   margin: 0 auto !important;
   line-height: 1.2 !important;
   opacity: 0.5 !important;
+  color: #566573;
 }
 .achieve__icon {
   display: flex;
@@ -250,10 +201,10 @@ header {
 .achieve__points {
   font-weight: 600;
   margin: 2px 0 !important;
-  color: #8236FD; 
+  color: #d92e7f; 
 }
 .cta button {
-  background: #0E0741;
+  background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
   color: #fafafa;
   font-weight: 500;
   width: calc(100% - 32px);
@@ -278,68 +229,68 @@ header {
                 <div class="bio__profile">
                   <div class="profile__photo"><img src="https://pbs.twimg.com/profile_images/834493671785525249/XdLjsJX_.jpg" class="user-photo"></div>
                   <h1 class="profile__name">Jane Doe</h1>
-                    <p style="color: #ccc;">
-                        <i class="bi bi-person-vcard" style="color: #8236FD;"></i> 
+                    <p style="color: #566573;">
+                        <i class="bi bi-person-vcard" style="color: #d92e7f;"></i> 
                             30 anos - 
-                        <i class="bi bi-qr-code" style="color: #8236FD;"></i> 
+                        <i class="bi bi-qr-code" style="color: #d92e7f;"></i> 
                         #123456
                     </p><br>
                 </div>
             
                 <div class="achieve">
-                  <br><br><br>
+                  <br><br>
                   <div class="achieve__iconGrid">
                     <!-------->
-                    <div class="achieve__icon" style="margin-bottom: 20px;">
-                        <div class="achieve__circle" style=" display: flex; justify-content: space-around; align-items: center; color: #8236FD;">
+                    <div class="achieve__icon" style="margin-bottom: 10px;">
+                        <div class="achieve__circle" style=" display: flex; justify-content: space-around; align-items: center; color: #d92e7f; border: 1px solid #d92e7f;">
                             <i class="bi bi-heart"></i>
                         </div>
                         <p class="achieve__points">120</p>
-                        <p class="achieve__pointsDesc">Fotos Curtidas</p>
+                        <p style="color: #566573 !important;">Fotos Curtidas</p>
                     </div>
                     <!-------->
                     <!-------->
-                    <div class="achieve__icon" style="margin-bottom: 20px;">
-                        <div class="achieve__circle" style=" display: flex; justify-content: space-around; align-items: center; color: #8236FD;">
+                    <div class="achieve__icon" style="margin-bottom: 10px;">
+                        <div class="achieve__circle" style=" display: flex; justify-content: space-around; align-items: center; color: #d92e7f; border: 1px solid #d92e7f;">
                             <i class="bi bi-cash-coin"></i>
                         </div>
                       <p class="achieve__points">R$ 50,00</p>
-                      <p class="achieve__pointsDesc">Valor Sacado</p>
+                      <p style="color: #566573 !important;">Valor Sacado</p>
                     </div>
                     <!-------->
                     <!-------->
-                    <div class="achieve__icon" style="margin-bottom: 20px;">
-                        <div class="achieve__circle" style=" display: flex; justify-content: space-around; align-items: center; color: #8236FD;">
+                    <div class="achieve__icon" style="margin-bottom: 10px;">
+                        <div class="achieve__circle" style=" display: flex; justify-content: space-around; align-items: center; color: #d92e7f; border: 1px solid #d92e7f;">
                             <i class="bi bi-cash-stack"></i>
                         </div>
                       <p class="achieve__points">R$ 130,00</p>
-                      <p class="achieve__pointsDesc">Valor Ganho</p>
+                      <p style="color: #566573 !important;">Valor Ganho</p>
                     </div>
                   </div>
                   <br>
                   <div class="achieve__iconGrid">
                     <!-------->
                     <!-------->
-                    <div class="achieve__icon" style="margin-bottom: 20px;">
-                        <div class="achieve__circle" style=" display: flex; justify-content: space-around; align-items: center; background: #8236FD; color: #FFF; margin-bottom: 5px;">
+                    <div class="achieve__icon" style="margin-bottom: 10px;">
+                        <div class="achieve__circle" style=" display: flex; justify-content: space-around; align-items: center; background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf); color: #FFF; margin-bottom: 5px;">
                             <i class="bi bi-pencil"></i>
                         </div>
-                        <p class="achieve__pointsDesc">Editar</p>
+                        <p style="color: #566573 !important;">Editar</p>
                     </div>
                     <!-------->
                     <!-------->
-                    <div class="achieve__icon" style="margin-bottom: 20px;">
-                        <div class="achieve__circle" style=" display: flex; justify-content: space-around; align-items: center; background: #8236FD; color: #FFF; margin-bottom: 5px;">
+                    <div class="achieve__icon" style="margin-bottom: 10px;">
+                        <div class="achieve__circle" style=" display: flex; justify-content: space-around; align-items: center; background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf); color: #FFF; margin-bottom: 5px;">
                             <i class="bi bi-wallet"></i>
                         </div>
-                        <p class="achieve__pointsDesc">Sacar</p>
+                        <p style="color: #566573 !important;">Sacar</p>
                     </div>
                     <!-------->
-                    <div class="achieve__icon" style="margin-bottom: 20px;">
-                        <div class="achieve__circle" style=" display: flex; justify-content: space-around; align-items: center; background: #8236FD; color: #FFF; margin-bottom: 5px;">
+                    <div class="achieve__icon" style="margin-bottom: 10px;">
+                        <div class="achieve__circle" style=" display: flex; justify-content: space-around; align-items: center; background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf); color: #FFF; margin-bottom: 5px;">
                             <i class="bi bi-box-arrow-in-right"></i>
                         </div>
-                        <p class="achieve__pointsDesc">Sair</p>
+                        <p style="color: #566573 !important;">Sair</p>
                     </div>
                   </div>
                 </div>

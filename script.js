@@ -6,6 +6,7 @@ var love = document.getElementById('love');
 var disp = document.getElementById("display");
 var alertamoney = document.getElementById("alertamoney");
 var count = 0;
+var sacar = document.getElementById("button");
 
 function initCards(card, index) {
   var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
@@ -70,6 +71,10 @@ love.onclick = function () {
       var rotate = xMulti * yMulti;
 
       event.target.style.transform = 'translate(' + toX + 'px, ' + (toY + event.deltaY) + 'px) rotate(' + rotate + 'deg)';
+      count=count+0.30;
+      disp.innerHTML = count.toFixed(2);
+      alertamoney.style.display = 'block';
+      setTimeout(function(){ alertamoney.style.display = 'none';}, 1000);
       initCards();
     }
   });
